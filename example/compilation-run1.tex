@@ -1,0 +1,96 @@
+% !TeX document-id = {2b322129-792a-4592-a97a-4ee984dc1dbc}
+% !TeX spellcheck = en_GB
+% !BIB program = bibtex
+% !TeX TS-program = pdflatex
+
+\documentclass[10pt,authoryear,a4paper]{elsarticle}
+
+\usepackage{geometry}
+\newgeometry{margin=2.25cm}
+
+\usepackage{hyperref}
+
+\usepackage{amsmath}
+\usepackage{xfrac}
+\providecommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+\usepackage{cleveref}
+
+\usepackage{nag}
+
+
+\usepackage[binary-units]{siunitx}
+\sisetup{group-separator = {,}}
+
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.16} 
+
+
+\usepackage{listofitems}
+\usepackage{booktabs}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{makecell}
+\renewcommand\theadfont{\bfseries}
+
+\usepackage{setspace}
+
+\usepackage{tabularx}
+\usepackage{placeins}
+
+
+\usepackage{cancel}
+
+\usepackage{colortbl}
+
+\newcommand{\VPDL}{$VPD_\text{leaf}$}
+\newcommand{\Tair}{$T_\text{air}$}
+\newcommand{\Tleaf}{$T_\text{leaf}$}
+\newcommand{\Cond}{$g_\text{s}$}
+\newcommand{\Photo}{$P_\text{n}$}
+\newcommand{\Transp}{$Tr$}
+\newcommand{\RH}{$RH$}
+\newcommand{\PAR}{$PAR$}
+
+\journal{Computers and Electronics in Agriculture}
+
+\usepackage{placeins}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Limitations of snapshot hyperspectral cameras to monitor plant response dynamics in stress-free conditions}
+
+
+\author[a,b]{Olivier~Pieters\corref{cor1}}
+\ead{olivier.pieters@ugent.be}
+\ead[url]{olivierpieters.be}
+
+\author[b]{Tom~De~Swaef}
+\ead{tom.deswaef@ilvo.vlaanderen.be}
+
+\cortext[cor1]{Corresponding author}
+
+\address[a]{IDLab-AIRO -- Ghent University -- imec, Technologiepark-Zwijnaarde 126, 9052 Zwijnaarde, Belgium}
+\address[b]{Plant Sciences Unit, Flanders Research Institute for Agriculture, Fisheries and Food, Caritasstraat 39, 9090 Melle, Belgium}
+
+\begin{abstract}  
+    Plants' dynamic eco-physiological responses are vital to their productivity in continuously fluctuating conditions, such as those in agricultural fields. However, it is currently still very difficult to capture these responses at the field scale for phenotyping purposes. Advanced hyperspectral imaging tools are increasingly used in phenotyping, and have been applied to detect changes in plants in response to a specific treatment, phenological state or monitor its growth and development. Phenotyping has to evolve towards capturing dynamic behaviour under more subtle fluctuations in environmental conditions, without the presence of clear treatments or stresses. Therefore, we investigated the potential of hyperspectral imaging to capture dynamic behaviour of plants in stress-free conditions at a temporal resolution of seconds. Two growth chamber experiments were set up, in which strawberry plants and four different background materials, serving as controls, were monitored by a snapshot hyperspectral camera in variable conditions of light, temperature and relative humidity. The sampling period was set to three seconds, triggering image acquisition and gas exchange measurements. Different background materials were used to assess the influence of the environment and the camera in both experiments. To separate the plant and background data, static masks were determined. Two datasets were created, which encompass both experiments. One dataset was constructed after averaging over the entire mask to acquire one value per spectral band. These values were then used to calculate a set of vegetation indices.  The other dataset used spatial subsampling to retain spatial information. From both datasets, linear models were constructed using ridge regression, which estimated the measured eco-physiological and environmental data. Leaf temperature and vapour pressure deficit based on leaf temperature are the two main eco-physiological characteristics that could be predicted successfully. Stomatal conductance, photosynthesis and transpiration rate show less promising results. We suspect that limited variation, and low spectral resolution and range are the main causes of the inability of the models to extract meaningful predictions. Furthermore, the models that were only trained on background data also showed good predictive performance. This is probably because the main drivers for good performing eco-physiological variables are temperature and incident light intensity. Environmental characteristics that have good performance are photosynthetically active radiation and air temperature. Current hyperspectral sensing technologies are not yet able to uncover most plant dynamic eco-physiological responses when plants are cultivated in stress-free conditions.
+\end{abstract}
+
+\begin{highlights}
+    \item Study of eco-physiological plant response dynamics in stress-free conditions
+    \item Leaf temperature and vapour pressure deficit were estimated with $\text{NMSE} < 0.23$
+\end{highlights}
+
+\begin{keyword}
+Hyperspectral camera\sep phenotyping\sep proximal sensing\sep dynamic\sep monitoring 
+\end{keyword}
+
+\end{frontmatter}
+
+\end{document}

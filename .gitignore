@@ -12,3 +12,5 @@ _minted-latex-intro
 *.blg
 *.spl
 example/media/
+!latex-intro.pdf
+!example/figures/*.pdf

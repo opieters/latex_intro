@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+_minted-latex-intro
+*.bbl
+*.blg
+*.spl
+example/media/

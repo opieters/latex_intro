@@ -79,7 +79,31 @@
 \address[b]{Plant Sciences Unit, Flanders Research Institute for Agriculture, Fisheries and Food, Caritasstraat 39, 9090 Melle, Belgium}
 
 \begin{abstract}  
-    Plants' dynamic eco-physiological responses are vital to their productivity in continuously fluctuating conditions, such as those in agricultural fields. However, it is currently still very difficult to capture these responses at the field scale for phenotyping purposes. Advanced hyperspectral imaging tools are increasingly used in phenotyping, and have been applied to detect changes in plants in response to a specific treatment, phenological state or monitor its growth and development. Phenotyping has to evolve towards capturing dynamic behaviour under more subtle fluctuations in environmental conditions, without the presence of clear treatments or stresses. Therefore, we investigated the potential of hyperspectral imaging to capture dynamic behaviour of plants in stress-free conditions at a temporal resolution of seconds. Two growth chamber experiments were set up, in which strawberry plants and four different background materials, serving as controls, were monitored by a snapshot hyperspectral camera in variable conditions of light, temperature and relative humidity. The sampling period was set to three seconds, triggering image acquisition and gas exchange measurements. Different background materials were used to assess the influence of the environment and the camera in both experiments. To separate the plant and background data, static masks were determined. Two datasets were created, which encompass both experiments. One dataset was constructed after averaging over the entire mask to acquire one value per spectral band. These values were then used to calculate a set of vegetation indices.  The other dataset used spatial subsampling to retain spatial information. From both datasets, linear models were constructed using ridge regression, which estimated the measured eco-physiological and environmental data. Leaf temperature and vapour pressure deficit based on leaf temperature are the two main eco-physiological characteristics that could be predicted successfully. Stomatal conductance, photosynthesis and transpiration rate show less promising results. We suspect that limited variation, and low spectral resolution and range are the main causes of the inability of the models to extract meaningful predictions. Furthermore, the models that were only trained on background data also showed good predictive performance. This is probably because the main drivers for good performing eco-physiological variables are temperature and incident light intensity. Environmental characteristics that have good performance are photosynthetically active radiation and air temperature. Current hyperspectral sensing technologies are not yet able to uncover most plant dynamic eco-physiological responses when plants are cultivated in stress-free conditions.
+    In perennial ryegrass breeding programs, dry matter yield (DMY) of
+    individual plots is monitored destructively at the different cuts or
+    derived from non-destructive canopy height measurements using devices
+    like rising plate meters (RPM). These approaches both have constraints.
+    Destructive sampling implies low temporal resolution, restraining the
+    study of dry matter accumulation rates, while RPM measurements are
+    influenced by the canopy structure and limit intra-field variability
+    identification. We present a phenotyping methodology, based on the use
+    of an affordable RGB camera mounted on an Unmanned Aerial Vehicle (UAV),
+    to monitor the spatial and temporal evolution of canopy height and to
+    estimate DMY. Weekly flights were carried out from April to October
+    above a field comprising a diverse set of accessions. To test the
+    capability of the model extracted from the data to estimate canopy height, 
+    8 ground control points and 28 artificial height references were placed 
+    at different locations. Accurate flights with an RMSE as low as 0.94 cm were
+    achieved. In addition, canopy height was recorded using an RPM and
+    destructive biomass samples were collected. Different models (linear,
+    multiple linear, principal components, partial least squares regression
+    and random forest) were used to predict DMY and their performance was
+    evaluated. The best estimations were obtained by combining variables
+    including canopy height, vegetation indices and environmental data in a
+    multiple linear regression (${R^2 = 0.81}$). All models built using UAV data
+    obtained a lower RMSE than the one using RPM data. The approach
+    presented is a possibility for breeders to incorporate new information
+    in their selection process.
 \end{abstract}
 
 \begin{highlights}

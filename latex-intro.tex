@@ -63,7 +63,8 @@
     \item Why \LaTeX?
     \item Document structure and syntax
     \item Preamble
-    \item Writing a First Document
+    \item A First Document in \LaTeX
+    \item<2->Several breaks to keep everybody focussed :)
     \end{itemize}
 \end{frame}
 
@@ -132,13 +133,17 @@
         Multiple documents (images, sections, tabular data)
     \end{block}
     
+    \onslide<2->{
     \begin{block}{\LaTeX\ vs.\ Word -- editing}
         Source code is edited directly \textrightarrow\ no speed loss in large documents (though compilation time increases)
     \end{block}
+    }
     
+    \onslide<3->{
     \begin{block}{\LaTeX\ vs.\ Word -- tools}
         Multiple tools work together (e.g.\ bibliography, index, abbreviations)
     \end{block}
+    }
 \end{frame}
 
 \begin{frame}{Check your Journal!}
@@ -146,9 +151,11 @@
         Always make sure your journal accepts PDF and/or \LaTeX\ submissions \emph{before} starting on a document.
     \end{alertblock}
     
+    \onslide<2->{
     \begin{alertblock}{Formatting}
         Try to use the formatting of the journal by reading the guidelines online. This saves a late conversion (and all associated issues).
     \end{alertblock}
+    }
 \end{frame}
 
 \begin{frame}[fragile]{A Simple Document}
@@ -192,7 +199,7 @@
     }
 \end{frame}
 
-\begin{frame}{LaTeX is not a programming language}
+\begin{frame}{\LaTeX\ is not a programming language}
 \begin{alertblock}{Important!}
     While \LaTeX\ might resemble a programming language, it is not a programming language but a \emph{typesetting system} built on top the programming language \TeX.
 \end{alertblock}
@@ -300,7 +307,7 @@
 
 \begin{frame}[fragile]{Ending the Document (for now)}
 \lstinputlisting[firstline=117,lastline=117,firstnumber=last]{example/article.tex}
-\lstinputlisting[firstline=424,lastline=424,firstnumber=last]{example/article.tex}
+\lstinputlisting[firstline=407,lastline=407,firstnumber=last]{example/article.tex}
 
 \textrightarrow\ Compile the document and see the output!
 \end{frame}
@@ -473,6 +480,7 @@ Add the contents to the introduction and hit compile.
             \item \texttt{\textbackslash textit}
             \item \texttt{\textbackslash textbf}
             \item \texttt{\textbackslash textsubscript}
+            \item \texttt{\textbackslash emph}
         \end{itemize}
     \end{column}
     \begin{column}{0.5\linewidth}
@@ -482,6 +490,7 @@ Add the contents to the introduction and hit compile.
             \item italics
             \item bold
             \item subscript
+            \item put the emphasis on this (usually in italics)
         \end{itemize}
     \end{column}
 \end{columns}
@@ -657,7 +666,37 @@ But.. Overleaf manages this for you!
 \end{frame}
 
 
-    
+\begin{frame}{Defining New Commands}
+
+Typing the same long sequence over and over again can get tiring. \LaTeX\ is expendable, so let's define a new command.
+
+\texttt{\textbackslash usepackage\{xparse\}}
+\texttt{\textbackslash NewDocumentCommand\{\textbackslash Tair\}\{\}\{T\textbackslash textsubscript\{air\}\}}
+\texttt{\textbackslash NewDocumentCommand\{\textbackslash english\}\{m\}\{T\textbackslash textit\{\#1\}\}}
+
+\end{frame}
+
+\begin{frame}{So much more...}
+    While you now know the basics, there's a lot more to be said and done
+
+    \begin{itemize}
+        \item<+-> Create figures in \LaTeX
+        \item<+-> Use CSV data to make plots and tables
+        \item<+-> Multi-file documents
+        \item<+-> Advances references and options
+        \item<+-> Lua scripting
+        \item<+-> Advanced mathematical typesetting
+        \item<+-> Slide shows
+        \item<+-> Special packages for chemistry, linguistics, genetics
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Questions and suggestions}
+
+Are there things that we did not cover but that you think are essential?
+
+\end{frame}
+
 
 %
 %\begin{frame}[fragile]{Filling Tables}
